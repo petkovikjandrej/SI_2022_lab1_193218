@@ -1,5 +1,5 @@
-Champagne
-Milk
-Bread
-Cheese
-Ham
+Champagne x 2
+Milk x 4
+Bread x 2
+Cheese x 1
+Ham x 3
