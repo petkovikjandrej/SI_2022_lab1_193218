@@ -1,0 +1,160 @@
+//Git Clone - клонирање на далечниот репозиторум односно на Github
+C:\Users\Andrej\Documents\SI2022>git clone https://github.com/petkovikjandrej/SI_2022_lab1_193218.git
+Cloning into 'SI_2022_lab1_193218'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+C:\Users\Andrej\Documents\SI2022>cd SI_2022_lab1_193218
+
+//Git Add - ставање на сцена
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git add shopping_list.txt
+
+//Git Commit - правење на слика
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git commit -m "Add 5 items to the shopping list"
+[master d6001e9] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+//Git Status - статусот на фајловите
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   shopping_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git add shopping_list.txt
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git commit -m "Add quantities to the items"
+[master 5f8e116] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+//Git Branch - креирање на гранка
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git branch branch1
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git branch branch2
+
+//Git Push - поставување на промените на далечниот репозиториум
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 634 bytes | 634.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/petkovikjandrej/SI_2022_lab1_193218.git
+   8e83c53..5f8e116  master -> master
+
+//Git Checkout - менување на гранка
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git checkout branch1
+Switched to branch 'branch1'
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git add shopping_list.txt
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git commit -m "Change quantity of item #5"
+[branch1 fe4321e] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git add shopping_list.txt
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git commit -m "Change quantity of item #2"
+[master d67265c] Change quantity of item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git push origin branch1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/petkovikjandrej/SI_2022_lab1_193218/pull/new/branch1
+remote:
+To https://github.com/petkovikjandrej/SI_2022_lab1_193218.git
+ * [new branch]      branch1 -> branch1
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/petkovikjandrej/SI_2022_lab1_193218.git
+   5f8e116..d67265c  master -> master
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git push origin branch2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/petkovikjandrej/SI_2022_lab1_193218/pull/new/branch2
+remote:
+To https://github.com/petkovikjandrej/SI_2022_lab1_193218.git
+ * [new branch]      branch2 -> branch2
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git checkout branch2
+Switched to branch 'branch2'
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git add shopping_list.txt
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git commit -m "Modify item #4"
+[branch2 3a0a90f] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git add shopping_list.txt
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git commit --amend -m "Modify item #4 and add item #6"
+[branch2 737364f] Modify item #4 and add item #6
+Date: Sat Apr 9 01:45:22 2022 +0200
+1 file changed, 3 insertions(+), 2 deletions(-)
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+//Git Merge - спојување на гранки
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+//Git Diff - разлика помеѓу commits
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git diff
+diff --cc shopping_list.txt
+index 500fed3,eb4d6a7..0000000
+--- a/shopping_list.txt
++++ b/shopping_list.txt
+@@@ -1,5 -1,6 +1,11 @@@
+  Champagne x 2
+ -Milk x 4
+ +Milk x 2
+  Bread x 2
+++<<<<<<< HEAD
+ +Cheese x 1
+- Ham x 5
+++Ham x 5
+++=======
++ Sparkling Water x 1
++ Ham x 3
+ -Donut x 4
+++Donut x 4
+++>>>>>>> branch2
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git add shopping_list.txt
+
+C:\Users\Andrej\Documents\SI2022\SI_2022_lab1_193218>git commit -m "Resolve conflict"
+[master fbbf6c4] Resolve conflict
